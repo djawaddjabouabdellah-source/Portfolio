@@ -1,89 +1,99 @@
-html, body {
-  background-color: #0d0d0d !important;
-  color: #ffffff !important;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
+/* ----------------------------------------- */
+/* 🌙 VARIABLES ET RESET                     */
+/* ----------------------------------------- */
+:root {
+  --background-dark: #0d0d0d;
+  --card-bg: #161616;
+  --accent-color: #ff9500; /* Orange BTS SIO */
+  --text-main: #ffffff;
+  --text-secondary: #b0b0b0;
+  --border-color: #333333;
 }
 
-/* Suppression des marges par défaut */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* FOND NOIR ET TEXTE CLAIR OBLIGATOIRE */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #0d0d0d !important; /* Le !important force le noir */
-  color: #ffffff !important;
-  line-height: 1.6;
+html {
+  scroll-behavior: smooth;
 }
 
-/* HEADER STYLE */
+body {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  background-color: var(--background-dark) !important;
+  color: var(--text-main) !important;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ----------------------------------------- */
+/* 🧭 HEADER ET NAVIGATION                   */
+/* ----------------------------------------- */
 header {
-  background: #1a1a1a;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
   text-align: center;
-  padding: 50px 20px;
-  border-bottom: 3px solid #ff9500;
+  padding: 80px 20px;
+  border-bottom: 4px solid var(--accent-color);
 }
 
 header h1 {
-  color: #ff9500;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
-/* BARRE DE NAVIGATION */
+header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+header img {
+  margin-top: 30px;
+  border-radius: 12px;
+  border: 2px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
 .navbar {
-  background-color: #1a1a1a;
-  padding: 15px;
+  background-color: rgba(26, 26, 26, 0.95);
+  padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
 }
 
 .navbar ul {
   display: flex;
   justify-content: center;
   list-style: none;
-}
-
-.navbar li {
-  margin: 0 15px;
+  gap: 30px;
 }
 
 .navbar a {
-  color: white;
   text-decoration: none;
-  font-weight: bold;
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #ff9500;
+  color: var(--accent-color);
 }
 
-/* SECTIONS (LES CARTES) */
+/* ----------------------------------------- */
+/* 📄 SECTIONS (LES CARTES)                 */
+/* ----------------------------------------- */
 .section {
   max-width: 900px;
-  margin: 30px auto;
-  padding: 30px;
-  background: #141414 !important; /* Gris très foncé pour les blocs */
-  border-radius: 12px;
-  border: 1px solid #333;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
-
-.section h2 {
-  color: #ff9500;
-  margin-bottom: 15px;
-}
-
-/* IMAGES */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-top: 20px;
-}
+  margin: 50px auto;
+  padding: 40px;
+  background: var(--card-bg) !important;
