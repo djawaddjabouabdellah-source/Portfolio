@@ -264,3 +264,71 @@ nav ul li a:hover { color: var(--accent); }
 .skill-card { background: #fff; border-radius: 12px; padding: 1.5rem 1rem; text-align: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); transition: var(--transition); }
 .skill-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15); }
 .skill-icon { font-size: 2rem; color: var(--accent); margin-bottom: 0.6rem; }
+/* --- Styles de la Section Stage --- */
+.stage-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.stage-card-large {
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.stage-card-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.stage-badge-entreprise {
+    background: var(--primary);
+    color: var(--white);
+    padding: 1rem 2rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.stage-body {
+    padding: 2.5rem;
+}
+
+.stage-body h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.stage-date {
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.stage-body p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.stage-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.stage-tags span {
+    background: #eff6ff;
+    color: var(--accent);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #dbeafe;
+}
